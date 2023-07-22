@@ -1,0 +1,11 @@
+<h1>Gmail Messages</h1>
+
+<% @keys.each do |key| %>
+    <%= @messages[key].each do |message| %>
+        <p>From: <%= message.from %></p>
+        <p>To: <%= message.to %></p>
+        <p>Cc: <%= message.cc %></p>
+        <p>Subject: <%= message.subject %></p>
+        <br><hr><br>
+    <% end %>
+<% end %>
